@@ -7,6 +7,7 @@ stories:
       - action: create_sms_form
       - active_loop: create_sms_form
       - active_loop: null
+      - action: send_a_text
     metadata:
       group: Phone Texts (SMS)
 rules: []

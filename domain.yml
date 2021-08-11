@@ -10,6 +10,7 @@ actions:
   - reminder_set_up
   - reset_lists_form
   - reset_lists_item
+  - send_a_text
   - show_a_list_action
   - show_all_lists_action
   - tell_date
@@ -100,14 +101,14 @@ forms:
     graph_elements:
       edges:
         - condition: null
-          id: e1-sms_phone_number
+          id: e1-sms_text
           source: '1'
-          target: sms_phone_number
+          target: sms_text
           type: condition
         - condition: null
-          id: esms_phone_number-sms_text
-          source: sms_phone_number
-          target: sms_text
+          id: esms_text-sms_phone_number
+          source: sms_text
+          target: sms_phone_number
           type: condition
       nodes:
         - id: '1'
@@ -118,13 +119,13 @@ forms:
         - id: sms_phone_number
           position:
             x: 120
-            'y': 350
+            'y': 540
           slotName: sms_phone_number
           type: slot
         - id: sms_text
           position:
             x: 120
-            'y': 500
+            'y': 380
           slotName: sms_text
           type: slot
     groupName: Phone Texts (SMS)
@@ -142,7 +143,7 @@ forms:
             type: from_text
         name: sms_text
         utter_on_new_valid_slot: false
-    updatedAt: 1628677552740
+    updatedAt: 1628682547351
   creation_form:
     collect_in_botfront: null
     description: null
@@ -525,7 +526,7 @@ responses:
   utter_ask_sms_text:
     - language: en
       metadata: null
-      text: What do you want to say to them?
+      text: What do you want to say in the text?
   utter_ask_timer_duration:
     - language: en
       metadata: null
