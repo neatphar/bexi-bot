@@ -1,0 +1,13 @@
+stories:
+  - story: Set a reminder
+    steps:
+      - intent: reminders.set_a_reminder
+        user: set a reminder
+        entities: []
+      - action: set_reminder_form
+      - active_loop: set_reminder_form
+      - active_loop: null
+      - action: reminder_set_up
+    metadata:
+      group: Reminders
+rules: []

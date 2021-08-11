@@ -1,0 +1,12 @@
+stories:
+  - story: Send a text
+    steps:
+      - intent: sms.send_a_text
+        user: send a text
+        entities: []
+      - action: create_sms_form
+      - active_loop: create_sms_form
+      - active_loop: null
+    metadata:
+      group: Phone Texts (SMS)
+rules: []

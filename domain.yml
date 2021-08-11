@@ -1,0 +1,715 @@
+actions:
+  - action_botfront_disambiguation
+  - action_botfront_disambiguation_followup
+  - action_botfront_fallback
+  - action_botfront_mapping
+  - add_to_a_list
+  - check_list_items
+  - create_a_list
+  - mark_as_complete
+  - reminder_set_up
+  - reset_lists_form
+  - reset_lists_item
+  - show_a_list_action
+  - show_all_lists_action
+  - tell_date
+  - tell_day
+  - tell_news
+  - tell_phase_of_day_for_greeting
+  - tell_time
+  - tell_weather
+  - temp_action
+  - timer_set_up
+  - utter_0xuIIZrvp
+  - utter_4-aPYdlVG
+  - utter_7Mh1lrJPa
+  - utter_BtXb60m5Z
+  - utter_CES9Fdnkl
+  - utter_CbY9qBWWA
+  - utter_GdJkZUB64
+  - utter_Oj2bDHOBa
+  - utter_OlL1pA_4v
+  - utter_R32dGHe0i
+  - utter_UtqTOxm2C
+  - utter_XyOIogxN5
+  - utter_YCG5uPzog
+  - utter_added_to_the_list
+  - utter_ask_helo
+  - utter_ask_item_name_2n
+  - utter_ask_list_item_1
+  - utter_ask_list_item_n
+  - utter_ask_list_name
+  - utter_ask_new_list_name
+  - utter_ask_reminder_name
+  - utter_ask_reminder_time
+  - utter_ask_sms_phone_number
+  - utter_ask_sms_text
+  - utter_ask_timer_duration
+  - utter_default
+  - utter_fwnq0PHoD
+  - utter_get_started
+  - utter_ibh8D_ktj
+  - utter_kXys18TnX
+  - utter_made_a_list
+  - utter_rau18kCzj
+  - utter_scaTZFiKh
+  - utter_t2QBud1rE
+  - utter_tBBLHsexOP
+  - utter_valid_new_list_name
+  - utter_zIu3yStnG
+entities:
+  - list_item
+  - list_name
+  - news_target
+forms:
+  1st_addition_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-list_item_1
+          source: '1'
+          target: list_item_1
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: list_item_1
+          position:
+            x: 120
+            'y': 360
+          slotName: list_item_1
+          type: slot
+    groupName: Lists Creation
+    name: 1st_addition_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: list_item_1
+        utter_on_new_valid_slot: false
+    updatedAt: 1628583962723
+  create_sms_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-sms_phone_number
+          source: '1'
+          target: sms_phone_number
+          type: condition
+        - condition: null
+          id: esms_phone_number-sms_text
+          source: sms_phone_number
+          target: sms_text
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: sms_phone_number
+          position:
+            x: 120
+            'y': 350
+          slotName: sms_phone_number
+          type: slot
+        - id: sms_text
+          position:
+            x: 120
+            'y': 500
+          slotName: sms_text
+          type: slot
+    groupName: Phone Texts (SMS)
+    name: create_sms_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: sms_phone_number
+        utter_on_new_valid_slot: false
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: sms_text
+        utter_on_new_valid_slot: false
+    updatedAt: 1628677552740
+  creation_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-list_name
+          source: '1'
+          target: list_name
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: list_name
+          position:
+            x: 120
+            'y': 350
+          slotName: list_name
+          type: slot
+    groupName: Lists Creation
+    name: creation_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: list_name
+        utter_on_new_valid_slot: false
+    updatedAt: 1628636384657
+  nth_addition_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-list_item_n
+          source: '1'
+          target: list_item_n
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: list_item_n
+          position:
+            x: 120
+            'y': 350
+          slotName: list_item_n
+          type: slot
+    groupName: Lists Creation
+    name: nth_addition_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: list_item_n
+        utter_on_new_valid_slot: false
+    updatedAt: 1628582274885
+  set_reminder_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-reminder_name
+          source: '1'
+          target: reminder_name
+          type: condition
+        - condition: null
+          id: ereminder_name-reminder_time
+          source: reminder_name
+          target: reminder_time
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: reminder_name
+          position:
+            x: 120
+            'y': 350
+          slotName: reminder_name
+          type: slot
+        - id: reminder_time
+          position:
+            x: 120
+            'y': 500
+          slotName: reminder_time
+          type: slot
+    groupName: Reminders
+    name: set_reminder_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: reminder_name
+        utter_on_new_valid_slot: false
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: reminder_time
+        utter_on_new_valid_slot: false
+    updatedAt: 1628672197653
+  timer_duration_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-timer_duration
+          source: '1'
+          target: timer_duration
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 220
+            'y': 160
+          type: start
+        - id: timer_duration
+          position:
+            x: 140
+            'y': 310
+          slotName: timer_duration
+          type: slot
+    groupName: Timers
+    name: timer_duration_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: timer_duration
+        utter_on_new_valid_slot: false
+    updatedAt: 1628636548416
+intents:
+  - basics.no
+  - basics.yes
+  - chitchat.bye
+  - chitchat.greet
+  - chitchat.how_are_you
+  - chitchat.insults
+  - chitchat.tell_me_a_fact
+  - chitchat.tell_me_a_joke
+  - chitchat.this_is_bad
+  - chitchat.this_is_good
+  - chitchat.you_are_welcome
+  - get_started
+  - lists.make_a_list
+  - lists.mark_as_complete
+  - lists.show_a_list
+  - lists.show_all_lists
+  - questions.ask_about_date
+  - questions.ask_about_day
+  - questions.ask_about_news
+  - questions.ask_about_time
+  - questions.ask_about_weather
+  - reminders.set_a_reminder
+  - sms.send_a_text
+  - timers.set_a_timer
+responses:
+  utter_0xuIIZrvp:
+    - language: en
+      text: Mine is going okay. Thanks for asking.
+  utter_4-aPYdlVG:
+    - language: en
+      metadata: null
+      text: I'm okay. How about you?
+    - language: en
+      metadata: null
+      text: I'm having a good day. How about you?
+    - language: en
+      metadata: null
+      text: 'I''m alright, and you?'
+  utter_7Mh1lrJPa:
+    - language: en
+      metadata: null
+      text: Good to hear that! Mine is okay too.
+    - language: en
+      metadata: null
+      text: Oh that's great! Mine was great too.
+    - language: en
+      metadata: null
+      text: Good.
+  utter_BtXb60m5Z:
+    - language: en
+      metadata: null
+      text: Great to know that.
+    - language: en
+      metadata: null
+      text: Good.
+  utter_CES9Fdnkl:
+    - language: en
+      metadata: null
+      text: McDonald’s once made bubblegum-flavored broccoli.
+    - language: en
+      metadata: null
+      text: 'Some fungi create zombie ants, then control their minds.'
+    - language: en
+      metadata: null
+      text: The first oranges weren’t orange. They were in fact green.
+    - language: en
+      metadata: null
+      text: Scotland has 421 words for snow.
+    - language: en
+      metadata: null
+      text: Peanuts aren’t technically nuts. They are seeds.
+    - language: en
+      metadata: null
+      text: Firefighters use wetting agents to make water wetter.
+    - language: en
+      metadata: null
+      text: 'The longest English word is 189,819 letters long.'
+    - language: en
+      metadata: null
+      text: 'Octopuses lay 56,000 eggs at a time.'
+    - language: en
+      metadata: null
+      text: Cats have fewer toes on their back paws.
+    - language: en
+      metadata: null
+      text: Kleenex tissues were originally intended for gas masks.
+    - language: en
+      metadata: null
+      text: Blue whales eat half a million calories in one mouthful.
+    - language: en
+      metadata: null
+      text: That tiny pocket in jeans was designed to store pocket watches.
+    - language: en
+      metadata: null
+      text: Turkeys can blush.
+    - language: en
+      metadata: null
+      text: Most Disney characters wear gloves to keep animation simple.
+    - language: en
+      metadata: null
+      text: Cows don’t have upper front teeth.
+  utter_CbY9qBWWA:
+    - language: en
+      text: '{temp}'
+  utter_GdJkZUB64:
+    - language: en
+      text: I'm sorry to hear that.
+  utter_Oj2bDHOBa:
+    - language: en
+      metadata: null
+      text: 'It is {date}.'
+    - language: en
+      metadata: null
+      text: 'Today is {date}.'
+  utter_OlL1pA_4v:
+    - language: en
+      metadata: null
+      text: Hello there! How's your day going?
+    - language: en
+      metadata: null
+      text: Hi! How's it going?
+    - language: en
+      metadata: null
+      text: 'Good {phaseofdayforgreeting}!'
+  utter_R32dGHe0i:
+    - language: en
+      metadata: null
+      text: Already? Okay then I hope to see you soon.
+    - language: en
+      metadata: null
+      text: See you soon!
+    - language: en
+      metadata: null
+      text: Goodbye!
+  utter_UtqTOxm2C:
+    - language: en
+      metadata: null
+      text: >-
+        I'm sorry to hear that. I hope there's something I could do to make you
+        feel better.
+    - language: en
+      metadata: null
+      text: 'So sorry to hear that. Hopefully, the rest of the day will be ok.'
+    - language: en
+      metadata: null
+      text: That's a shame.
+  utter_XyOIogxN5:
+    - language: en
+      text: I want more.
+  utter_YCG5uPzog:
+    - language: en
+      text: '{weather}'
+  utter_added_to_the_list:
+    - language: en
+      text: Added it to the list!
+    - language: en
+      text: Got it!
+    - language: en
+      text: Got that!
+    - language: en
+      text: Done.
+    - language: en
+      text: I added it.
+  utter_ask_helo:
+    - language: en
+      metadata: null
+      text: |
+        help me?  
+  utter_ask_item_name_2n:
+    - language: en
+      metadata: null
+      text: What else?
+  utter_ask_list_item_1:
+    - language: en
+      metadata: null
+      text: What do you want to add to it?
+    - language: en
+      metadata: null
+      text: What to add as a start?
+    - language: en
+      metadata: null
+      text: What do you have in mind for it?
+  utter_ask_list_item_n:
+    - language: en
+      metadata: null
+      text: What else?
+    - language: en
+      metadata: null
+      text: Anything else on mind?
+    - language: en
+      metadata: null
+      text: Anything else?
+    - language: en
+      metadata: null
+      text: What else?
+  utter_ask_list_name:
+    - language: en
+      metadata: null
+      text: What should be the name of the list?
+  utter_ask_new_list_name:
+    - language: en
+      metadata: null
+      text: What should be the name of the list?
+  utter_ask_reminder_name:
+    - language: en
+      metadata: null
+      text: What should this reminder be about?
+    - language: en
+      metadata: null
+      text: What do you want me to remind you?
+    - language: en
+      metadata: null
+      text: What is this reminder about?
+  utter_ask_reminder_time:
+    - language: en
+      metadata: null
+      text: When should I remind you about it?
+    - language: en
+      metadata: null
+      text: When should I set it up?
+    - language: en
+      metadata: null
+      text: 'When do you want me to remind you about {reminder_name}?'
+  utter_ask_sms_phone_number:
+    - language: en
+      metadata: null
+      text: Can you tell me the number you want to text?
+    - language: en
+      metadata: null
+      text: What's the phone number of the recipent?
+    - language: en
+      metadata: null
+      text: Okay. What's the phone number of it?
+  utter_ask_sms_text:
+    - language: en
+      metadata: null
+      text: What do you want to say to them?
+  utter_ask_timer_duration:
+    - language: en
+      metadata: null
+      text: How long should it be?
+    - language: en
+      metadata: null
+      text: For how long do you want it to be?
+  utter_default:
+    - language: en
+      text: I did not get that. Can you repeat it more clearly?
+  utter_fwnq0PHoD:
+    - language: en
+      metadata: null
+      text: Okay. Done. The list is now complete.
+    - language: en
+      metadata: null
+      text: Great. I saved the list.
+  utter_get_started:
+    - language: en
+      text: >-
+        Hello! This is Bex. I'm your personal assistant. Let's get into some
+        conversation!
+  utter_ibh8D_ktj:
+    - language: en
+      metadata: null
+      text: Okay good.
+    - language: en
+      metadata: null
+      text: Good for you.
+  utter_kXys18TnX:
+    - language: en
+      metadata: null
+      text: 'It is {time}.'
+    - language: en
+      metadata: null
+      text: 'It''s {time}.'
+    - language: en
+      metadata: null
+      text: 'Time is {time}.'
+    - language: en
+      metadata: null
+      text: 'I think it''s {time} now.'
+    - language: en
+      metadata: null
+      text: 'It''s probably {time}.'
+    - language: en
+      metadata: null
+      text: 'It might be {time}.'
+  utter_made_a_list:
+    - language: en
+      text: 'I made you a list called {list_name}.'
+    - language: en
+      text: 'The list {list_name} is up and ready.'
+    - language: en
+      text: 'Done. I created {list_name}.'
+  utter_rau18kCzj:
+    - language: en
+      metadata: null
+      text: How do robots eat salsa? With micro chips.
+    - language: en
+      metadata: null
+      text: How did the robot get across the river? In a ro-boat.
+    - language: en
+      metadata: null
+      text: What do robots wear in winter? Ro-boots.
+    - language: en
+      metadata: null
+      text: What's a robot's favourite dance? The Roomba.
+    - language: en
+      metadata: null
+      text: What's a robot's favourite exercise? Circuit training.
+    - language: en
+      metadata: null
+      text: What's a robot's favourite country? Bots-wana.
+    - language: en
+      metadata: null
+      text: >-
+        Why does everyone fall asleep in Professor Robot's flying class? Because
+        he drones on and on.
+    - language: en
+      metadata: null
+      text: How did the robot's teacher mark his book? With robo-ticks.
+    - language: en
+      metadata: null
+      text: What name should you never call a robot? Rusty.
+    - language: en
+      metadata: null
+      text: >-
+        Why are robots shy? Because they've got hardware and software but no
+        underwear.
+    - language: en
+      metadata: null
+      text: What do you call a robot dog? Dogmatic.
+    - language: en
+      metadata: null
+      text: Why did the robot sneeze? She had a virus.
+    - language: en
+      metadata: null
+      text: What do robot pine trees grow? Sili-cones.
+    - language: en
+      metadata: null
+      text: How do you make a robot angry? Push its buttons.
+    - language: en
+      metadata: null
+      text: What do you get if you cross a robot with a tractor? A trans-farmer.
+  utter_scaTZFiKh:
+    - language: en
+      metadata: null
+      text: I'm sorry. Is this some kind of a joke?
+    - language: en
+      metadata: null
+      text: Are you ok?
+  utter_t2QBud1rE:
+    - language: en
+      metadata: null
+      text: 'Hmmmmm. Hi again, I guess?'
+    - language: en
+      metadata: null
+      text: 'Hi again, I guess?'
+    - language: en
+      metadata: null
+      text: Ugh. Not again.
+  utter_tBBLHsexOP:
+    - language: en
+      text: Hmmm OK. I hope you get back your senses.
+  utter_valid_new_list_name:
+    - language: en
+      metadata: null
+      text: Okay.
+  utter_zIu3yStnG:
+    - language: en
+      metadata: null
+      text: 'Today is {day}.'
+    - language: en
+      metadata: null
+      text: 'It''s {day}.'
+    - language: en
+      metadata: null
+      text: 'It is {day} today.'
+    - language: en
+      metadata: null
+      text: 'It is {day} of this week.'
+session_config: {}
+slots:
+  date:
+    initial_value: date
+    type: text
+  day:
+    initial_value: day
+    type: text
+  disambiguation_message:
+    type: unfeaturized
+  enabled:
+    initial_value: true
+    type: bool
+  fallback_language:
+    initial_value: en
+    type: unfeaturized
+  list_item_1:
+    type: unfeaturized
+  list_item_n:
+    type: unfeaturized
+  list_name:
+    type: unfeaturized
+  new_item_incoming:
+    type: bool
+  phaseofdayforgreeting:
+    initial_value: morning
+    type: text
+  reminder_name:
+    type: unfeaturized
+  reminder_time:
+    type: unfeaturized
+  sms_phone_number:
+    type: unfeaturized
+  sms_text:
+    type: unfeaturized
+  temp:
+    type: text
+  time:
+    initial_value: time
+    type: text
+  timer_duration:
+    type: unfeaturized
+  weather:
+    initial_value: hot
+    type: text

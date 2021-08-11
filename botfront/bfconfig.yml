@@ -1,0 +1,10 @@
+name: Bex
+namespace: bf-bex
+defaultLanguage: en
+nluThreshold: 0.75
+timezoneOffset: 2
+allowContextualQuestions: false
+instance:
+  name: Default Instance
+  host: 'http://rasa:5005'
+  projectId: SZspqYK5cCR2CFe9n

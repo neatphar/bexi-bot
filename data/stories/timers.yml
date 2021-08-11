@@ -1,0 +1,13 @@
+stories:
+  - story: Set a timer
+    steps:
+      - intent: timers.set_a_timer
+        user: set a timer
+        entities: []
+      - action: timer_duration_form
+      - active_loop: timer_duration_form
+      - active_loop: null
+      - action: timer_set_up
+    metadata:
+      group: Timers
+rules: []

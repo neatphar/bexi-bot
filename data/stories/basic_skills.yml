@@ -1,0 +1,51 @@
+stories:
+  - story: How are you
+    steps:
+      - intent: chitchat.how_are_you
+        user: how are you
+        entities: []
+      - action: utter_4-aPYdlVG
+      - checkpoint: How_are_you__branches
+    metadata:
+      group: Basic Skills
+  - story: How are you__Bad
+    steps:
+      - checkpoint: How_are_you__branches
+      - or:
+          - intent: chitchat.this_is_bad
+            user: i'm bad
+            entities: []
+          - intent: chitchat.this_is_frustrating
+            user: im not doing well
+            entities: []
+      - action: utter_GdJkZUB64
+    metadata:
+      group: Basic Skills
+  - story: How are you__Good
+    steps:
+      - checkpoint: How_are_you__branches
+      - intent: chitchat.this_is_good
+        user: im fine
+        entities: []
+      - action: utter_BtXb60m5Z
+    metadata:
+      group: Basic Skills
+rules:
+  - rule: Get Started
+    condition: []
+    steps:
+      - intent: get_started
+        entities: []
+      - action: utter_get_started
+    metadata:
+      group: Basic Skills
+  - rule: Test
+    condition: []
+    steps:
+      - intent: chitchat.insults
+        user: Fuck you
+        entities: []
+      - action: temp_action
+      - action: utter_CbY9qBWWA
+    metadata:
+      group: Basic Skills

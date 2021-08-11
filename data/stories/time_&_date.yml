@@ -1,0 +1,32 @@
+stories: []
+rules:
+  - rule: Date
+    condition: []
+    steps:
+      - intent: questions.ask_about_date
+        user: what's the date
+        entities: []
+      - action: tell_date
+      - action: utter_Oj2bDHOBa
+    metadata:
+      group: Time & Date
+  - rule: Day
+    condition: []
+    steps:
+      - intent: questions.ask_about_day
+        user: what day is it
+        entities: []
+      - action: tell_day
+      - action: utter_zIu3yStnG
+    metadata:
+      group: Time & Date
+  - rule: Time
+    condition: []
+    steps:
+      - intent: questions.ask_about_time
+        user: what's the time
+        entities: []
+      - action: tell_time
+      - action: utter_kXys18TnX
+    metadata:
+      group: Time & Date

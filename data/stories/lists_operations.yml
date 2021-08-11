@@ -1,0 +1,31 @@
+stories: []
+rules:
+  - rule: Mark Item as Complete
+    condition: []
+    steps:
+      - intent: lists.mark_as_complete
+        user: mark something as complete
+        entities:
+          - list_item: something
+      - action: mark_as_complete
+    metadata:
+      group: Lists Operations
+  - rule: Show a list
+    condition: []
+    steps:
+      - intent: lists.show_a_list
+        user: show me the shopping list
+        entities:
+          - list_name: shopping
+      - action: show_a_list_action
+    metadata:
+      group: Lists Operations
+  - rule: Show All Lists.
+    condition: []
+    steps:
+      - intent: lists.show_all_lists
+        user: show me my lists
+        entities: []
+      - action: show_all_lists_action
+    metadata:
+      group: Lists Operations

@@ -1,0 +1,83 @@
+stories:
+  - story: Greetings
+    steps:
+      - intent: chitchat.greet
+        user: hi
+        entities: []
+      - action: tell_phase_of_day_for_greeting
+      - action: utter_OlL1pA_4v
+      - checkpoint: Greetings__branches
+    metadata:
+      group: Greetings & Farewell
+  - story: Greetings__Ask for Status
+    steps:
+      - checkpoint: Greetings__branches
+      - intent: chitchat.how_are_you
+        user: it's good how about you
+        entities: []
+      - action: utter_0xuIIZrvp
+      - intent: chitchat.you_are_welcome
+        user: you're welcome
+        entities: []
+    metadata:
+      group: Greetings & Farewell
+  - story: Greetings__Day Status (Bad)
+    steps:
+      - checkpoint: Greetings__branches
+      - intent: chitchat.this_is_bad
+        user: it's not good
+        entities: []
+      - action: utter_UtqTOxm2C
+    metadata:
+      group: Greetings & Farewell
+  - story: Greetings__Day Status (Good)
+    steps:
+      - checkpoint: Greetings__branches
+      - intent: chitchat.this_is_good
+        user: it's going good
+        entities: []
+      - action: utter_7Mh1lrJPa
+    metadata:
+      group: Greetings & Farewell
+  - story: Greetings__Repeatitive Greetings
+    steps:
+      - checkpoint: Greetings__branches
+      - intent: chitchat.greet
+        user: good evening
+        entities: []
+      - action: utter_t2QBud1rE
+      - intent: chitchat.greet
+        user: good afternoon
+        entities: []
+      - action: utter_scaTZFiKh
+      - checkpoint: Greetings__Repeatitive_Greetings__branches
+    metadata:
+      group: Greetings & Farewell
+  - story: Greetings__Repeatitive Greetings__Repeatitive Greetings (Negative)
+    steps:
+      - checkpoint: Greetings__Repeatitive_Greetings__branches
+      - intent: basics.no
+        user: 'no'
+        entities: []
+      - action: utter_tBBLHsexOP
+    metadata:
+      group: Greetings & Farewell
+  - story: Greetings__Repeatitive Greetings__Repeatitive Greetings (Positive)
+    steps:
+      - checkpoint: Greetings__Repeatitive_Greetings__branches
+      - intent: basics.yes
+        user: 'yes'
+        entities: []
+      - action: utter_ibh8D_ktj
+    metadata:
+      group: Greetings & Farewell
+rules:
+  - rule: Farewell
+    condition: []
+    steps:
+      - intent: chitchat.bye
+        user: bye
+        entities: []
+      - action: utter_R32dGHe0i
+    metadata:
+      group: Greetings & Farewell

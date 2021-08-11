@@ -1,0 +1,22 @@
+stories: []
+rules:
+  - rule: News
+    condition: []
+    steps:
+      - intent: questions.ask_about_news
+        user: what's new about bitcoin
+        entities:
+          - news_target: bitcoin
+      - action: tell_news
+    metadata:
+      group: News & Weather
+  - rule: Weather
+    condition: []
+    steps:
+      - intent: questions.ask_about_weather
+        user: how warm is it
+        entities: []
+      - action: tell_weather
+      - action: utter_YCG5uPzog
+    metadata:
+      group: News & Weather

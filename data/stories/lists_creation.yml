@@ -1,0 +1,48 @@
+stories:
+  - story: Lists Creation & 1st Addition
+    steps:
+      - intent: lists.make_a_list
+        user: make a list
+        entities: []
+      - action: reset_lists_form
+      - action: creation_form
+      - active_loop: creation_form
+      - active_loop: null
+      - action: create_a_list
+      - action: 1st_addition_form
+      - active_loop: 1st_addition_form
+      - active_loop: null
+      - action: add_to_a_list
+      - checkpoint: link-to-nth Addition/d85a030e-ed15-4e26-87a4-609b30d88aac
+    metadata:
+      group: Lists Creation
+  - story: nth Addition
+    steps:
+      - checkpoint: link-to-nth Addition/d85a030e-ed15-4e26-87a4-609b30d88aac
+      - action: reset_lists_item
+      - action: nth_addition_form
+      - active_loop: nth_addition_form
+      - active_loop: null
+      - action: check_list_items
+      - checkpoint: nth_Addition__branches
+    metadata:
+      group: Lists Creation
+  - story: nth Addition__More
+    steps:
+      - checkpoint: nth_Addition__branches
+      - slot_was_set:
+          - new_item_incoming: true
+      - action: add_to_a_list
+      - checkpoint: link-to-nth Addition/d85a030e-ed15-4e26-87a4-609b30d88aac
+    metadata:
+      group: Lists Creation
+  - story: nth Addition__No More
+    steps:
+      - checkpoint: nth_Addition__branches
+      - slot_was_set:
+          - new_item_incoming: false
+      - action: utter_fwnq0PHoD
+      - action: reset_lists_form
+    metadata:
+      group: Lists Creation
+rules: []

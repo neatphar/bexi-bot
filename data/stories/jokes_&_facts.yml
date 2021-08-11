@@ -1,0 +1,20 @@
+stories: []
+rules:
+  - rule: Facts
+    condition: []
+    steps:
+      - intent: chitchat.tell_me_a_fact
+        user: tell me a fact
+        entities: []
+      - action: utter_CES9Fdnkl
+    metadata:
+      group: Jokes & Facts
+  - rule: Jokes
+    condition: []
+    steps:
+      - intent: chitchat.tell_me_a_joke
+        user: tell me a joke
+        entities: []
+      - action: utter_rau18kCzj
+    metadata:
+      group: Jokes & Facts
