@@ -1,5 +1,7 @@
 title: Bex
-subtitle: Happy to help
+subtitle: Your Personal Assistant
 inputTextFieldHint: Type your message...
 initPayload: /get_started
 hideWhenNotConnected: true
+customData:
+  language: en

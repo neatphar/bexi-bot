@@ -23,6 +23,8 @@ nlu:
   - text: |
       not really
   - text: |
+      nothing thanks
+  - text: |
       oh no
   - text: |
       please no
@@ -1226,6 +1228,8 @@ nlu:
   examples:
   - text: |
       I wanna hear a good one
+  - text: |
+      do you know any funny jokes
   - text: |
       tell me a good one
   - text: |
@@ -2784,6 +2788,8 @@ nlu:
       can you send a sms text to someone
   - text: |
       can you text someone for me
+  - text: |
+      send a message
   - text: |
       send a text
     metadata:
