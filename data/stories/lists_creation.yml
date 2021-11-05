@@ -13,12 +13,12 @@ stories:
       - active_loop: 1st_addition_form
       - active_loop: null
       - action: add_to_a_list
-      - checkpoint: link-to-nth Addition/d85a030e-ed15-4e26-87a4-609b30d88aac
+      - checkpoint: link-to-nth Addition/5c8f4d01-a9b5-446d-bf5a-16a7ab34ada7
     metadata:
       group: Lists Creation
   - story: nth Addition
     steps:
-      - checkpoint: link-to-nth Addition/d85a030e-ed15-4e26-87a4-609b30d88aac
+      - checkpoint: link-to-nth Addition/5c8f4d01-a9b5-446d-bf5a-16a7ab34ada7
       - action: reset_lists_item
       - action: nth_addition_form
       - active_loop: nth_addition_form
@@ -33,7 +33,7 @@ stories:
       - slot_was_set:
           - new_item_incoming: true
       - action: add_to_a_list
-      - checkpoint: link-to-nth Addition/d85a030e-ed15-4e26-87a4-609b30d88aac
+      - checkpoint: link-to-nth Addition/5c8f4d01-a9b5-446d-bf5a-16a7ab34ada7
     metadata:
       group: Lists Creation
   - story: nth Addition__No More

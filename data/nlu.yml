@@ -1245,6 +1245,8 @@ nlu:
   - text: |
       I thank you
   - text: |
+      Thank you
+  - text: |
       all thank you
   - text: |
       alright thank you
@@ -2510,28 +2512,48 @@ nlu:
   examples:
   - text: |
       mark [a](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [b](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [c](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [cats](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [dogs](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [food](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [hot](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [item](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [something](list_item) as complete
     metadata:
       canonical: true
   - text: |
       mark [work](list_item) as complete
+    metadata:
+      canonical: true
   - text: |
       mark [x](list_item) as complete
+    metadata:
+      canonical: true
 - intent: lists.show_a_list
   metadata:
     language: en
@@ -2702,6 +2724,8 @@ nlu:
       how hot is it
   - text: |
       how hot is it in [cairo](place)
+    metadata:
+      canonical: true
   - text: |
       how hot is it in [mansoura](place)
   - text: |
@@ -2720,38 +2744,72 @@ nlu:
       how warm is it in [cairo](place)
   - text: |
       how's the weather in [Abo Dhabi](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [Doha](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [Libya](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [Morocco](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [Riyadh](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [Tunisia](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [alexandria](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [baghdad](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [beriut](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [berlin](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [canada](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [kabul](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [london](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [mosco](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [sinai](place)
+    metadata:
+      canonical: true
   - text: |
       how's the weather in [tehran](place)
+    metadata:
+      canonical: true
   - text: |
       what's the weather in [Georgia](place)
+    metadata:
+      canonical: true
   - text: |
       what's the weather in [cairo](place)
   - text: |

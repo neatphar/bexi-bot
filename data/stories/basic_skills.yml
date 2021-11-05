@@ -49,3 +49,12 @@ rules:
       - action: utter_CbY9qBWWA
     metadata:
       group: Basic Skills
+  - rule: Thanks
+    condition: []
+    steps:
+      - intent: chitchat.thank_you
+        user: Thank you
+        entities: []
+      - action: utter_u7TBJFz4k
+    metadata:
+      group: Basic Skills

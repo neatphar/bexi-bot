@@ -56,6 +56,7 @@ actions:
   - utter_scaTZFiKh
   - utter_t2QBud1rE
   - utter_tBBLHsexOP
+  - utter_u7TBJFz4k
   - utter_valid_new_list_name
   - utter_zIu3yStnG
 entities:
@@ -94,7 +95,7 @@ forms:
             type: from_text
         name: list_item_1
         utter_on_new_valid_slot: false
-    updatedAt: 1628583962723
+    updatedAt: 1636058197863
   create_sms_form:
     collect_in_botfront: null
     description: null
@@ -143,7 +144,7 @@ forms:
             type: from_text
         name: sms_text
         utter_on_new_valid_slot: false
-    updatedAt: 1628866292341
+    updatedAt: 1636058197874
   creation_form:
     collect_in_botfront: null
     description: null
@@ -175,7 +176,7 @@ forms:
             type: from_text
         name: list_name
         utter_on_new_valid_slot: false
-    updatedAt: 1628636384657
+    updatedAt: 1636058197877
   nth_addition_form:
     collect_in_botfront: null
     description: null
@@ -207,7 +208,7 @@ forms:
             type: from_text
         name: list_item_n
         utter_on_new_valid_slot: false
-    updatedAt: 1628582274885
+    updatedAt: 1636058197880
   set_reminder_form:
     collect_in_botfront: null
     description: null
@@ -256,7 +257,7 @@ forms:
             type: from_text
         name: reminder_time
         utter_on_new_valid_slot: false
-    updatedAt: 1628672197653
+    updatedAt: 1636058197885
   timer_duration_form:
     collect_in_botfront: null
     description: null
@@ -288,7 +289,7 @@ forms:
             type: from_text
         name: timer_duration
         utter_on_new_valid_slot: false
-    updatedAt: 1628636548416
+    updatedAt: 1636111832975
 intents:
   - basics.no
   - basics.yes
@@ -298,6 +299,7 @@ intents:
   - chitchat.insults
   - chitchat.tell_me_a_fact
   - chitchat.tell_me_a_joke
+  - chitchat.thank_you
   - chitchat.this_is_bad
   - chitchat.this_is_good
   - chitchat.you_are_welcome
@@ -320,76 +322,53 @@ responses:
       text: Mine is going okay. Thanks for asking.
   utter_4-aPYdlVG:
     - language: en
-      metadata: null
       text: I'm okay. How about you?
     - language: en
-      metadata: null
       text: I'm having a good day. How about you?
     - language: en
-      metadata: null
       text: 'I''m alright, and you?'
   utter_7Mh1lrJPa:
     - language: en
-      metadata: null
       text: Good to hear that! Mine is okay too.
     - language: en
-      metadata: null
       text: Oh that's great! Mine was great too.
     - language: en
-      metadata: null
       text: Good.
   utter_BtXb60m5Z:
     - language: en
-      metadata: null
       text: Great to know that.
     - language: en
-      metadata: null
       text: Good.
   utter_CES9Fdnkl:
     - language: en
-      metadata: null
       text: McDonald’s once made bubblegum-flavored broccoli.
     - language: en
-      metadata: null
       text: 'Some fungi create zombie ants, then control their minds.'
     - language: en
-      metadata: null
       text: The first oranges weren’t orange. They were in fact green.
     - language: en
-      metadata: null
       text: Scotland has 421 words for snow.
     - language: en
-      metadata: null
       text: Peanuts aren’t technically nuts. They are seeds.
     - language: en
-      metadata: null
       text: Firefighters use wetting agents to make water wetter.
     - language: en
-      metadata: null
       text: 'The longest English word is 189,819 letters long.'
     - language: en
-      metadata: null
       text: 'Octopuses lay 56,000 eggs at a time.'
     - language: en
-      metadata: null
       text: Cats have fewer toes on their back paws.
     - language: en
-      metadata: null
       text: Kleenex tissues were originally intended for gas masks.
     - language: en
-      metadata: null
       text: Blue whales eat half a million calories in one mouthful.
     - language: en
-      metadata: null
       text: That tiny pocket in jeans was designed to store pocket watches.
     - language: en
-      metadata: null
       text: Turkeys can blush.
     - language: en
-      metadata: null
       text: Most Disney characters wear gloves to keep animation simple.
     - language: en
-      metadata: null
       text: Cows don’t have upper front teeth.
   utter_CbY9qBWWA:
     - language: en
@@ -399,42 +378,31 @@ responses:
       text: I'm sorry to hear that.
   utter_Oj2bDHOBa:
     - language: en
-      metadata: null
       text: 'It is {date}.'
     - language: en
-      metadata: null
       text: 'Today is {date}.'
   utter_OlL1pA_4v:
     - language: en
-      metadata: null
       text: Hello there! How's your day going?
     - language: en
-      metadata: null
       text: Hi! How's it going?
     - language: en
-      metadata: null
       text: 'Good {phaseofdayforgreeting}!'
   utter_R32dGHe0i:
     - language: en
-      metadata: null
       text: Already? Okay then I hope to see you soon.
     - language: en
-      metadata: null
       text: See you soon!
     - language: en
-      metadata: null
       text: Goodbye!
   utter_UtqTOxm2C:
     - language: en
-      metadata: null
       text: >-
         I'm sorry to hear that. I hope there's something I could do to make you
         feel better.
     - language: en
-      metadata: null
       text: 'So sorry to hear that. Hopefully, the rest of the day will be ok.'
     - language: en
-      metadata: null
       text: That's a shame.
   utter_XyOIogxN5:
     - language: en
@@ -455,94 +423,69 @@ responses:
       text: I added it.
   utter_ask_helo:
     - language: en
-      metadata: null
       text: |
         help me?  
   utter_ask_item_name_2n:
     - language: en
-      metadata: null
       text: What else?
   utter_ask_list_item_1:
     - language: en
-      metadata: null
       text: What do you want to add to it?
     - language: en
-      metadata: null
       text: What to add as a start?
     - language: en
-      metadata: null
       text: What do you have in mind for it?
   utter_ask_list_item_n:
     - language: en
-      metadata: null
       text: What else?
     - language: en
-      metadata: null
       text: Anything else on mind?
     - language: en
-      metadata: null
       text: Anything else?
     - language: en
-      metadata: null
       text: What else?
   utter_ask_list_name:
     - language: en
-      metadata: null
       text: What should be the name of the list?
   utter_ask_new_list_name:
     - language: en
-      metadata: null
       text: What should be the name of the list?
   utter_ask_reminder_name:
     - language: en
-      metadata: null
       text: What should this reminder be about?
     - language: en
-      metadata: null
       text: What do you want me to remind you?
     - language: en
-      metadata: null
       text: What is this reminder about?
   utter_ask_reminder_time:
     - language: en
-      metadata: null
       text: When should I remind you about it?
     - language: en
-      metadata: null
       text: When should I set it up?
     - language: en
-      metadata: null
       text: 'When do you want me to remind you about {reminder_name}?'
   utter_ask_sms_phone_number:
     - language: en
-      metadata: null
       text: Can you tell me the number you want to text?
     - language: en
-      metadata: null
       text: What's the phone number of the recipent?
     - language: en
-      metadata: null
       text: Okay. What's the phone number of it?
   utter_ask_sms_text:
     - language: en
-      metadata: null
       text: What do you want to say in the text?
   utter_ask_timer_duration:
     - language: en
-      metadata: null
       text: How long should it be?
     - language: en
-      metadata: null
       text: For how long do you want it to be?
   utter_default:
     - language: en
       text: I did not get that. Can you repeat it more clearly?
   utter_fwnq0PHoD:
     - language: en
-      metadata: null
       text: Okay. Done. The list is now complete.
     - language: en
-      metadata: null
       text: Great. I saved the list.
   utter_get_started:
     - language: en
@@ -551,29 +494,21 @@ responses:
         conversation!
   utter_ibh8D_ktj:
     - language: en
-      metadata: null
       text: Okay good.
     - language: en
-      metadata: null
       text: Good for you.
   utter_kXys18TnX:
     - language: en
-      metadata: null
       text: 'It is {time}.'
     - language: en
-      metadata: null
       text: 'It''s {time}.'
     - language: en
-      metadata: null
       text: 'Time is {time}.'
     - language: en
-      metadata: null
       text: 'I think it''s {time} now.'
     - language: en
-      metadata: null
       text: 'It''s probably {time}.'
     - language: en
-      metadata: null
       text: 'It might be {time}.'
   utter_made_a_list:
     - language: en
@@ -584,90 +519,75 @@ responses:
       text: 'Done. I created {list_name}.'
   utter_rau18kCzj:
     - language: en
-      metadata: null
       text: How do robots eat salsa? With micro chips.
     - language: en
-      metadata: null
       text: How did the robot get across the river? In a ro-boat.
     - language: en
-      metadata: null
       text: What do robots wear in winter? Ro-boots.
     - language: en
-      metadata: null
       text: What's a robot's favourite dance? The Roomba.
     - language: en
-      metadata: null
       text: What's a robot's favourite exercise? Circuit training.
     - language: en
-      metadata: null
       text: What's a robot's favourite country? Bots-wana.
     - language: en
-      metadata: null
       text: >-
         Why does everyone fall asleep in Professor Robot's flying class? Because
         he drones on and on.
     - language: en
-      metadata: null
       text: How did the robot's teacher mark his book? With robo-ticks.
     - language: en
-      metadata: null
       text: What name should you never call a robot? Rusty.
     - language: en
-      metadata: null
       text: >-
         Why are robots shy? Because they've got hardware and software but no
         underwear.
     - language: en
-      metadata: null
       text: What do you call a robot dog? Dogmatic.
     - language: en
-      metadata: null
       text: Why did the robot sneeze? She had a virus.
     - language: en
-      metadata: null
       text: What do robot pine trees grow? Sili-cones.
     - language: en
-      metadata: null
       text: How do you make a robot angry? Push its buttons.
     - language: en
-      metadata: null
       text: What do you get if you cross a robot with a tractor? A trans-farmer.
   utter_scaTZFiKh:
     - language: en
-      metadata: null
       text: I'm sorry. Is this some kind of a joke?
     - language: en
-      metadata: null
       text: Are you ok?
   utter_t2QBud1rE:
     - language: en
-      metadata: null
       text: 'Hmmmmm. Hi again, I guess?'
     - language: en
-      metadata: null
       text: 'Hi again, I guess?'
     - language: en
-      metadata: null
       text: Ugh. Not again.
   utter_tBBLHsexOP:
     - language: en
       text: Hmmm OK. I hope you get back your senses.
-  utter_valid_new_list_name:
+  utter_u7TBJFz4k:
     - language: en
       metadata: null
+      text: You're most welcome.
+    - language: en
+      metadata: null
+      text: Any time.
+    - language: en
+      metadata: null
+      text: It's my pleasure
+  utter_valid_new_list_name:
+    - language: en
       text: Okay.
   utter_zIu3yStnG:
     - language: en
-      metadata: null
       text: 'Today is {day}.'
     - language: en
-      metadata: null
       text: 'It''s {day}.'
     - language: en
-      metadata: null
       text: 'It is {day} today.'
     - language: en
-      metadata: null
       text: 'It is {day} of this week.'
 session_config: {}
 slots:
