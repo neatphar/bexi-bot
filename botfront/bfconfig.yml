@@ -7,4 +7,4 @@ allowContextualQuestions: false
 instance:
   name: Default Instance
   host: 'http://rasa:5005'
-  projectId: 5AuDZEAmyoMDuMxQW
+  projectId: C7EApbWpYyPwTMTFD

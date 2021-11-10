@@ -95,7 +95,7 @@ forms:
             type: from_text
         name: list_item_1
         utter_on_new_valid_slot: false
-    updatedAt: 1636058197863
+    updatedAt: 1636569732338
   create_sms_form:
     collect_in_botfront: null
     description: null
@@ -144,7 +144,7 @@ forms:
             type: from_text
         name: sms_text
         utter_on_new_valid_slot: false
-    updatedAt: 1636058197874
+    updatedAt: 1636569732347
   creation_form:
     collect_in_botfront: null
     description: null
@@ -176,7 +176,7 @@ forms:
             type: from_text
         name: list_name
         utter_on_new_valid_slot: false
-    updatedAt: 1636058197877
+    updatedAt: 1636569732352
   nth_addition_form:
     collect_in_botfront: null
     description: null
@@ -208,7 +208,7 @@ forms:
             type: from_text
         name: list_item_n
         utter_on_new_valid_slot: false
-    updatedAt: 1636058197880
+    updatedAt: 1636569732359
   set_reminder_form:
     collect_in_botfront: null
     description: null
@@ -257,7 +257,7 @@ forms:
             type: from_text
         name: reminder_time
         utter_on_new_valid_slot: false
-    updatedAt: 1636058197885
+    updatedAt: 1636569732366
   timer_duration_form:
     collect_in_botfront: null
     description: null
@@ -289,7 +289,7 @@ forms:
             type: from_text
         name: timer_duration
         utter_on_new_valid_slot: false
-    updatedAt: 1636111832975
+    updatedAt: 1636569742427
 intents:
   - basics.no
   - basics.yes
@@ -569,13 +569,10 @@ responses:
       text: Hmmm OK. I hope you get back your senses.
   utter_u7TBJFz4k:
     - language: en
-      metadata: null
       text: You're most welcome.
     - language: en
-      metadata: null
       text: Any time.
     - language: en
-      metadata: null
       text: It's my pleasure
   utter_valid_new_list_name:
     - language: en
